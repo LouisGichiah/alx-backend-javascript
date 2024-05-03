@@ -1,7 +1,7 @@
 const http = require('http');
 
-const HOST = 'localhost';
-const PORT = 1245;
+const Port = 1245;
+const Host = 'localhost';
 const app = http.createServer();
 
 app.on('request', (_, res) => {
@@ -13,8 +13,8 @@ app.on('request', (_, res) => {
   res.write(Buffer.from(responseText));
 });
 
-app.listen(HOST, PORT, () => {
-  process.stdout.write(`Server listening at -> http://${HOST}:${PORT}\n`);
+app.listen(Port, Host, () => {
+  process.stdout.write(`Server listening at -> http://${Host}:${Port}\n`);
 });
 
 module.exports = app;
