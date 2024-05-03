@@ -28,5 +28,19 @@
       "mocha": "^6.2.2",
       "request": "^2.88.0",
       "sinon": "^7.5.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/LouisGichiah/alx-backend-javascript"
+    },
+    "bugs": {
+      "url": "https://github.com/LouisGichiah/alx-backend-javascript/tree/main/0x05-Node_JS_basic"
+    },
+    "homepage": "https://github.com/LouisGichiah/alx-backend-javascript/blob/main/0x05-Node_JS_basic/README.md",
+    "engines": {
+      "node": "16.x",
+      "npm": "8.x",
+      "yarn": "1.x"
     }
+  }
   }
