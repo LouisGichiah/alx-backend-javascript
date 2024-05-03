@@ -1,16 +1,13 @@
-// 1-stdin.js
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-const readline = require('readline');
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
 
-function handleInput(input) {
-    console.log(`Your name is: ${input}`);
-    if (!process.stdin.isTTY) {
-        console.log('This important software is now closing');
-    }
-    process.exit(0);
-}
+  if (input) {
+    process.stdout.write(`Your name is: ${input}`);
+  }
+});
 
-module.exports = handleInput;
-
-// The rest of the code remains the same
-
+process.stdin.on('end', () => {
+  process.stdout.write('This important software is now closing\n');
+});
