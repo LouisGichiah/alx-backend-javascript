@@ -3,8 +3,8 @@ process.stdout.write('Welcome to Holberton School, what is your name?\n');
 process.stdin.on('readable', () => {
   const chunk = process.stdin.read();
 
-  if (input) {
-    process.stdout.write(`Your name is: ${input}`);
+  if (INPUT) {
+    process.stdout.write(`Your name is: ${INPUT}`);
   }
 });
 
