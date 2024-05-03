@@ -43,7 +43,7 @@ class StudentsController {
   }
 
   static getAllStudentsByMajor(request, response) {
-    const dataPath = process.argv.length > 2 ? process.argv[2] : '';
+    const datapath = process.argv.length > 2 ? process.argv[2] : '';
     const { major } = request.params;
 
     if (!Valid_Majors.includes(major)) {
