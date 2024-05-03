@@ -4,7 +4,7 @@ const fs = require('fs');
 const Port = 1245;
 const Host = 'localhost';
 const app = http.createServer();
-const DB_FILE = process.argv.length > 2 ? process.argv[2] : '';
+const DB_File = process.argv.length > 2 ? process.argv[2] : '';
 
 /**
  * Counts the students in a CSV data file.
@@ -81,7 +81,7 @@ const SERVER_ROUTE_HANDLERS = [
     handler(_, res) {
       const responseParts = ['This is the list of our students'];
 
-      countStudents(DB_FILE)
+      countStudents(DB_File)
         .then((report) => {
           responseParts.push(report);
           const responseText = responseParts.join('\n');
