@@ -1,18 +1,18 @@
 const fs = require('fs');
 /**
  * Counts the students in a CSV data file.
- * @param {String} dataPath The path to the CSV data file.
+ * @param {String} datapath The path to the CSV data file.
  * @author Louis Gichiah <https://github.com/LouisGichiah>
  */
-const countStudents = (dataPath) => {
-  if (!fs.existsSync(dataPath)) {
+const countStudents = (datapath) => {
+  if (!fs.existsSync(datapath)) {
     throw new Error('Cannot load the database');
   }
-  if (!fs.statSync(dataPath).isFile()) {
+  if (!fs.statSync(datapath).isFile()) {
     throw new Error('Cannot load the database');
   }
   const fileLines = fs
-    .readFileSync(dataPath, 'utf-8')
+    .readFileSync(datapath, 'utf-8')
     .toString('utf-8')
     .trim()
     .split('\n');
