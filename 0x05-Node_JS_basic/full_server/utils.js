@@ -12,7 +12,7 @@ const readDatabase = (datapath) => new Promise((resolve, reject) => {
     reject(new Error('Cannot load the database'));
   }
   if (datapath) {
-    fs.readFile(dataPath, (err, data) => {
+    fs.readFile(datapath, (err, data) => {
       if (err) {
         reject(new Error('Cannot load the database'));
       }
